@@ -1,0 +1,305 @@
+<p>
+    Flu Vac Campaign Portlet 26/27&nbsp;<style type="text/css">body{
+                                            	font: normal 13px/20px Arial, Helvetica, sans-serif; word-wrap:break-word;
+                                            	color: #eee;
+                                            	background: #353535;
+                                            }
+                                            #countdown{
+                                            	width: 200px;
+                                            	height: 100px;
+                                            	text-align: center;
+                                            	background: #005EB8;
+                                            	background-image: -webkit-linear-gradient(top, #005EB8, #003087, #003087, #005EB8);
+                                            	background-image:    -moz-linear-gradient(top, #005EB8, #003087, #003087, #005EB8);
+                                            	background-image:     -ms-linear-gradient(top, #005EB8, #003087, #003087, #005EB8);
+                                            	background-image:      -o-linear-gradient(top, #005EB8, #003087, #003087, #005EB8);
+                                            	border: 1px solid #111;
+                                            	border-radius: 5px;
+                                            	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+                                            	margin: auto;
+                                            	padding: 24px 0;
+                                            	position: relative;
+                                              top: 0; bottom: 0; left: 0; right: 0;
+                                            }
+                                            #countdown:before{
+                                            	content:"";
+                                            	width: 8px;
+                                            	height: 60px;
+                                            	background: #444;
+                                            	background-image: -webkit-linear-gradient(top, #555, #41B6E6, #41B6E6, #555);
+                                            	background-image:    -moz-linear-gradient(top, #555, #41B6E6, #41B6E6, #555);
+                                            	background-image:     -ms-linear-gradient(top, #555, #41B6E6, #41B6E6, #555);
+                                            	background-image:      -o-linear-gradient(top, #555, #41B6E6, #41B6E6, #555);
+                                            	border: 1px solid #111;
+                                            	border-top-left-radius: 6px;
+                                            	border-bottom-left-radius: 6px;
+                                            	display: block;
+                                            	position: absolute;
+                                            	top: 20px; left: -8px;
+                                            }
+                                            #countdown:after{
+                                            	content:"";
+                                            	width: 8px;
+                                            	height: 60px;
+                                            	background: #444;
+                                            	background-image: -webkit-linear-gradient(top, #555, #41B6E6, #41B6E6, #555);
+                                            	background-image:    -moz-linear-gradient(top, #555, #41B6E6, #41B6E6, #555);
+                                            	background-image:     -ms-linear-gradient(top, #555, #41B6E6, #41B6E6, #555);
+                                            	background-image:      -o-linear-gradient(top, #555, #41B6E6, #41B6E6, #555);
+                                            	border: 1px solid #111;
+                                            	border-top-right-radius: 6px;
+                                            	border-bottom-right-radius: 6px;
+                                            	display: block;
+                                            	position: absolute;
+                                            	top: 20px; right: -8px;
+                                            }
+                                            #countdown #tiles{
+                                            	position: relative;
+                                            	z-index: 1;
+                                            }
+                                            #countdown #tiles > span{
+                                            	width: 35px;
+                                            	max-width: 35px;
+                                            	font: bold 20px 'Droid Sans', Arial, sans-serif;
+                                            	text-align: center;
+                                            	color: #111;
+                                            	background-color: #ddd;
+                                            	background-image: -webkit-linear-gradient(top, #bbb, #eee);
+                                            	background-image:    -moz-linear-gradient(top, #bbb, #eee);
+                                            	background-image:     -ms-linear-gradient(top, #bbb, #eee);
+                                            	background-image:      -o-linear-gradient(top, #bbb, #eee);
+                                            	border-top: 1px solid #fff;
+                                            	border-radius: 3px;
+                                            	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+                                            	margin: 0 7px;
+                                            	padding: 4px 0;
+                                            	display: inline-block;
+                                            	position: relative;
+                                            }
+                                            #countdown #tiles > span:before{
+                                            	content:"";
+                                            	width: 10%;
+                                            	height: 13px;
+                                            	background: #111;
+                                            	display: block;
+                                            	padding: 0 3px;
+                                            	position: absolute;
+                                            	top: 41%; left: -3px;
+                                            	z-index: -1;
+                                            }
+                                            #countdown #tiles > span:after{
+                                            	content:"";
+                                            	width: 100%;
+                                            	height: 1px;
+                                            	background: #eee;
+                                            	border-top: 1px solid #333;
+                                            	display: block;
+                                            	position: absolute;
+                                            	top: 48%; left: 0;
+                                            }
+                                            #countdown .CDlabels{
+                                            	width: 120%;
+                                            	height: 25px;
+                                            	text-align: left;
+                                            	position: absolute;
+                                            	bottom: 8px;
+                                              	left: -36px;
+                                            }
+                                            #countdown .CDlabels li{
+                                            	width: 45px;
+                                            	font: 12px 'Droid Sans', Arial, sans-serif;
+                                            	color: #FAE100;
+                                            	text-shadow: 1px 1px 0px #000;
+                                            	text-align: center;
+                                            	text-transform: uppercase;
+                                            	display: inline-block;
+                                              left: -40;
+                                            }
+                                                @property --p{
+                                              syntax: '<number>';
+                                              inherits: true;
+                                              initial-value: 0;
+                                            }
+                                              .piecontainer{  margin-left: auto;
+                                                margin-right: auto;
+                                                width: 8em}
+                                            .pie {
+                                              --p:0;
+                                              --b:22px;
+                                              --c:darkred;
+                                              --w:150px;
+                                              width:var(--w);
+                                              aspect-ratio:1;
+                                              position:relative;
+                                              display:inline-grid;
+                                              margin:5px;
+                                              place-content:center;
+                                              font-size:25px;
+                                              font-weight:bold;
+                                              font-family:sans-serif;
+                                            }
+                                            .pie:before,
+                                            .pie:after {
+                                              content:"";
+                                              position:absolute;
+                                              border-radius:50%;
+                                            }
+                                            .pie:before {
+                                              inset:0;
+                                              background:
+                                                radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+                                                conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+                                              -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+                                                      mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+                                            }
+                                            .pie:after {
+                                              inset:calc(50% - var(--b)/2);
+                                              background:var(--c);
+                                              transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+                                            }
+                                            .animate {
+                                              animation:p 1s .5s both;
+                                            }
+                                            }
+                                            @keyframes p {
+                                              from{--p:0}
+                                            }
+                                             .BarChart {
+                                              animation-name: BarChart;
+                                            }
+                                            section article.BarChart {
+                                              width: auto;
+                                              height: auto;
+                                            }
+                                            section article.BarChart p {
+                                              z-index: 2;
+                                              color: #000;
+                                              padding: 10px;
+                                              position: relative;
+                                              box-sizing: border-box;
+                                              overflow: hidden;
+                                            }
+                                            section article.BarChart div span:nth-child(2) {
+                                              z-index: -1;
+                                              position: absolute;
+                                              top: 0;
+                                              bottom: 0;
+                                              left: 0;
+                                              right: 0;
+                                              background: #5E95E8;
+                                              height: 100%;
+                                            }
+                                              /* Doctors bar*/
+                                            section article.BarChart div:nth-child(1) span:nth-child(2) {
+                                              width: 0.01%;
+                                              animation-delay: 0;
+                                              background-color:red
+                                            }
+                                              /* Qualified Nursing bar*/
+                                            section article.BarChart div:nth-child(2) span:nth-child(2) {
+                                              width: 0.01%;
+                                              animation-delay: 0.05s;
+                                              background-color:Orange
+                                            }
+                                              /* Qualified Clinical Staff bar*/
+                                            section article.BarChart div:nth-child(3) span:nth-child(2) {
+                                              width: 0.01%;
+                                              animation-delay: 0.1s;
+                                              background-color:green
+                                            }
+                                              /* Support to Clinical Staff bar*/
+                                            section article.BarChart div:nth-child(4) span:nth-child(2) {
+                                              width: 0.01%;
+                                              animation-delay: 0.15s;
+                                              background-color:blue
+                                            }
+                                            section article.BarChart div:nth-child(7) span:nth-child(2) {
+                                              width: 6%;
+                                              animation-delay: 0.3s;
+                                              background-color:black
+                                            }
+                                            section article.BarChart div:nth-child(8) span:nth-child(2) {
+                                              width: 17%;
+                                              animation-delay: 0.35s;
+                                              background-color:grey
+                                            }
+                                            .BarChart {
+                                              animation: BarChart 1.25s cubic-bezier(0.17, 0.67, 0, 1);
+                                            }
+                                            @keyframes BarChart {
+                                              0% {
+                                                left: -500px;
+                                                opacity: 0;
+                                              }
+                                              100% {
+                                                left: 0;
+                                                opacity: 1;
+                                              }
+                                            }
+                                            </style>
+</p>
+<p>
+    Seasonal influenza (flu) is an unpredictable but recurring pressure that the NHS faces every winter. Vaccination offers the best protection.
+</p>
+<div id="countdown">
+    <div id="tiles">
+        &nbsp;
+    </div>
+    <div class="CDlabels">
+        <ul>
+            <li data-list-item-id="e10da3d5e904bb201d85ae682f4cbeabf">
+                Days
+            </li>
+            <li data-list-item-id="e0a7f6d10949965bd03a66c87b103a8b8">
+                Hours
+            </li>
+            <li data-list-item-id="e1cd13a7555c4092ad709ccce6eab606f">
+                Mins
+            </li>
+            <li data-list-item-id="ee33457ce355c1eb0e292d0f6e575c480">
+                Secs
+            </li>
+        </ul>
+    </div>
+</div>
+<h2>
+    Current Progress
+</h2>
+<p>
+    The 26/27 Flu Vaccination Campaign begins 5th October 2026, and uptake rates will be published below and updated on a weekly basis.
+</p>
+<div class="piecontainer">
+    <div class="pie animate" style="--c:lightgreen;--p:30;">
+        0.0%
+    </div>
+</div>
+<section class="toad-fullscreen" id="BarChart">
+    <article class="BarChart">
+        <div class="t-6">
+            <p>
+                Doctors 0%
+            </p>
+        </div>
+        <div class="t-6">
+            <p>
+                Qualified Nursing 0%
+            </p>
+        </div>
+        <div class="t-6">
+            <p>
+                Qualified Clinical Staff 0%
+            </p>
+        </div>
+        <div class="t-6">
+            <p>
+                Support to Clinical Staff 0%
+            </p>
+        </div>
+        <h2>
+            Arranging your vaccination
+        </h2>
+        <p>
+            <a class="btn btn-block btn-outline-primary" href="https://www.uhliverpool.nhs.uk/luhft-staff/staff-vaccinations" role="button" target="">A list of Trust vaccination sessions is available online <u>here</u></a> <a class="btn btn-block btn-outline-primary" href="https://www.uhliverpool.nhs.uk/luhft-staff/staff-vaccinations" role="button" target="">For information on the Vaccination Programme click <u>here</u></a> var target_date = new Date("2026-12-21T00:00"); // set the countdown date var days, hours, minutes, seconds; // variables for time units var countdown = document.getElementById("tiles"); // get tag element getCountdown(); setInterval(function () { getCountdown(); }, 1000); function getCountdown(){ // find the amount of "seconds" between now and target var current_date = new Date().getTime(); var seconds_left = (target_date - current_date) / 1000; days = pad( parseInt(seconds_left / 86400) ); seconds_left = seconds_left % 86400; hours = pad( parseInt(seconds_left / 3600) ); seconds_left = seconds_left % 3600; minutes = pad( parseInt(seconds_left / 60) ); seconds = pad( parseInt( seconds_left % 60 ) ); // format countdown string + set tag value countdown.innerHTML = "&lt;span&gt;" + days + "&lt;/span&gt;&lt;span&gt;" + hours + "&lt;/span&gt;&lt;span&gt;" + minutes + "&lt;/span&gt;&lt;span&gt;" + seconds + "&lt;/span&gt;"; } function pad(n) { return (n &lt; 10 ? '0' : '') + n; }
+        </p>
+    </article>
+</section>
